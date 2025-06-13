@@ -8,10 +8,26 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
   datasource:
-    url: jdbc:postgresql://host/database # Додайте власний HOST та базу даних
+    url: jdbc:postgresql://dpg-d14nu5u3jp1c73bkg3t0-a/practice2_ht2m # Додайте власний HOST та базу даних
     username: user # додайте власний логін
-    password: password # додайте власний пароль
+    password: wgNRBOMKn8fZn5u6KbMYqwTjOREFxQF7 # додайте власний пароль
     driverClassName: org.postgresql.Driver
   sql:
     init:
       platform: postgres
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 1061946355419-c6bih5fsu37287v205muuch48fd9b40b.apps.googleusercontent.com
+            client-secret: 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
+            scope:
+              - email
+              - profile
+        provider:
+          google:
+            authorization-uri: https://accounts.google.com/o/oauth2/auth
+            token-uri: https://oauth2.googleapis.com/token
+            user-info-uri: https://www.googleapis.com/oauth2/v3/userinfo
